@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/aarongable
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://aarongable.com
+  * I am aarongable (https://keybase.io/aarongable) on keybase.
+  * I have a public key with fingerprint FA0D D92C 1DAD AAF7 54E0  51E1 64E1 6A8E 282F B4AA
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.18"
+        },
+        "key": {
+            "eldest_kid": "01018256a941ae4e391c09faa79dcf592dc012f9fb802f7ce05b84560b2af6b70f8f0a",
+            "fingerprint": "fa0dd92c1dadaaf754e051e164e16a8e282fb4aa",
+            "host": "keybase.io",
+            "key_id": "64e16a8e282fb4aa",
+            "kid": "01018256a941ae4e391c09faa79dcf592dc012f9fb802f7ce05b84560b2af6b70f8f0a",
+            "uid": "ffb798d9655c765f356059e9f9450800",
+            "username": "aarongable"
+        },
+        "service": {
+            "hostname": "aarongable.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1441229908,
+    "expire_in": 157680000,
+    "prev": "c5b37b258c94183c7cd594477e9358f9a3bd4a87dc875995de4608a25bcf8c58",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtkm1oFEccxu/iy2lQ0faDL1QrqxiReM7u7ezORLFEESNKjJKrLRTPeb1sc7d7
+2dtEo7EVDLRqDIIighpFaCOEtKUUaQuxIIoNGkEQFPUilFSpodV+KTF9cybEQtGP
+fhhYZn7PM8//2TkyfUKsLJ7e9s/Bnt1tVvzaLzSWfpSr32PQgLcaVXsMlvOEH+kv
+n+SFUWU0ilZKiiLpBQv9gIvkh8WF40yl0SLCohf4igJJlDSRsbdS81otclwUo0yj
+x/WpCUxkQYdg2yTCFilsMoAlIS7mTEJscQZMS2JJEbCkywSAFNnQAdQi0qEukEgC
+oi6Unp8VYSH0dERDEsA5tpjJCSdEutBWQlOYjq0WQcJClqQ20cKGoBj9bxhjLGlm
+LN4r+Necu3nMTkrqYsSxAyFzHShTioRYYIltCBAAGiyKcLx4QsLAzxKaE7pWtd/i
+MaGr1bO8xCRZkFf6QhhEAQty6qwhigpVWhq1FjS7U9DMuEuGej5XVSrBqf/+oalQ
+Fnna17Rt07IwBqjSELsKXigyniag66iYAOh7RIvyZJCmXGpBxFRDKMVcxiG2bdcV
+OAWRxCRFuU2QyxlyIcaQC9sBiFiQMokYRIYerMkPlHdKBSVZ5Vn0sj6JmkM19oH4
+WxNj8bLY5Ell+pXGyqfOfPF0Dy9L/Fszt/vGaPnso/uX9GQ/PzNSLXfQfP2qlXef
+7ujvevBZuvNm9yf7SvUXR8Gn7V7N75ver/1mMDW7Y/260v2mDfOM9ObTwz2NJ6Ld
+heDku00PR+raBhr37+xtW7CmtHjXj9+e7I//8LPz0zt3v/5izvrmvX2JXFrcmrn9
+UEV7x3tXpq2owH8MwGTX7d4TdybVriws/T6576u3w78uXX6Mqs8O3U9cSZy/MBKQ
+Y9Ou1pX3NgxunT89MH7Nr7n90d8fDG/syA/N6Kw+MPrn9TePD8L+e2DW1L6a5KL8
+cN1Qouzq8S0TP4bnKtrPlQa6ub81u+y3xOiUN0q1312uXfvsyZTWFavNvlOdy89+
++Rw=
+=CM2q
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aarongable
+
+==================================================================

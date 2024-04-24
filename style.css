@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: #f4eade;
+}
+header {
+  background-color: #2988bc;
+  min-height: calc(100vh - 4em);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: bottom;
+  align-items: center;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Lato", "Open Sans", Arial, sans-serif;
+  margin: 0;
+}
+h1 {
+  font-family: "Lato", "Open Sans", Arial, sans-serif;
+  font-size: 88px;
+  font-weight: 300;
+  text-align: center;
+}
+h2 {
+  font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+h3 {
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  margin-top: 2em;
+}
+h4 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.float {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+@media (max-width: 520px) {
+  .float {
+    display: none;
+  }
+}
+.float a {
+  width: 3em;
+  height: 3em;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 1s;
+}
+nav {
+  background-color: #2f496e;
+  height: 4em;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav > ol {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+nav > ol > li {
+  flex-basis: 25%;
+  text-align: center;
+}
+nav a {
+  color: #ed8c72;
+  font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+}
+main > hr {
+  width: 100%;
+  height: 1px;
+  background-color: #2988bc;
+  border: none;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  /* This bumps the section down by the height of the header, so it is in
+	 the right place when someone uses one of the fragment links. Due to
+	 box-sizing, this is included in the height of each section.
+  */
+  padding-top: 4em;
+  margin-top: -4em;
+}
+section > hr {
+  width: 50px;
+  height: 3px;
+  margin: 1em;
+  background-color: #ed8c72;
+  border: none;
+}
+section#about,
+section#projects {
+  min-height: calc(100vh);
+}
+section#contact {
+  /* This leaves room for the footer at the bottom, while still aligning
+   the top exactly with the top of the viewport.
+  */
+  min-height: calc(100vh - 4em);
+}
+.twocols {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 700px) {
+  .twocols {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.threecols {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 1100px) {
+  .threecols {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.column {
+  flex-grow: 1;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center {
+  justify-content: space-around;
+}
+.top {
+  justify-content: start;
+}
+.text {
+  max-width: 400px;
+}
+.circular {
+  border-radius: 50%;
+}
+#headshot {
+  width: 100%;
+  max-width: 256px;
+}
+@media (min-width: 400px) {
+  #headshot {
+    width: 256px;
+  }
+}    
+.rgrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.rgriditem {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.hoversquare {
+  width: 100px;
+  height: 100px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: solid 2px;
+  border-color: #2988bc;
+  transition: .25s;
+}
+@media (min-width: 520px) {
+	.hoversquare {
+    width: 200px;
+    height: 200px;
+	}
+}
+.hoversquare:hover {
+  box-shadow: 1px 1px 0px 1px #2f496e;
+}
+.hoversquare p {
+  margin: 0;
+}
+@media (max-width: 520px) {
+  .hoversquare p {
+    display: none;
+  }
+}
+#footer {
+  background-color: #2f496e;
+  height: 4em;
+  color: #ed8c72;
+  display: flex;
+  align-items: center;
+  padding-left: 3em;
+}
+#footer p {
+  color: #ed8c72;
+  font-family: "Lato", "Open Sans", Arial, sans-serif;
+}
+p {
+  line-height: 1.4;
+  font-family: "Lato", "Open Sans", Arial, sans-serif;
+  color: black;
+  text-align: justify;
+}
+p > a {
+  color: #2988bc;
+}
+p > a:visited {
+  color: #2f496e;
+}

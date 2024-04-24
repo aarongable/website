@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+% Changes the layout for CV style section headings as marginal notes.
+% The margin widths and section title widths can be easily adjusted.
+\usepackage[paper=letterpaper,
+            marginparwidth=1in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.5in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+
+\pagestyle{empty}      % No page numbers
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\Large \bfseries #1}\\[-0.8\baselineskip]%
+                 \rule{\columnwidth}{0.25pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[3]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \small \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]\vspace{-0.3\baselineskip}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Aaron Gable}
+
+\section{Contact Information}
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+\begin{tabular}[t]{@{}p{3.45in}p{2.5in}}
+\email{aaron@aarongable.com}                  & \href{https://github.com/aarongable}{github.com/aarongable} \\
+\href{https://aarongable.com}{aarongable.com} & \href{https://linkedin.com/in/agable}{linkedin.com/in/agable} \\
+\end{tabular}
+
+\section{Objective}
+    A senior software engineering technical lead or individual contributor role
+    at a company innovating in their field, with a special interest in open source.
+
+\section{Work Experience}
+    \textbf{Google, Inc.}
+    \hfill \textbf{2012 -- Present} \\
+    \textit{Chrome Browser Infrastructure and Operations}
+
+    \blankline % This separates entries in the list
+
+    \textbf{Senior Software Engineer}
+    \hfill \textbf{2019 -- Present} \\
+    \textit{Chrome Browser Core EngProd, Tech Lead and Manager}
+    \begin{innerlist}
+        \item Founder, manager, and technical lead of a new team of five software engineers.
+        \item Owned configuration, performance, and capacity management of the largest open-source
+            pre- and post-submit continuous integration build and test automation system in the world:
+            \begin{innerlist}
+                \item Pre-submit: 1,500 commit attempts per day, 900 hours of tests per attempt
+                \item Post-submit: 530+ distinct platform configurations, 
+                \item 12,000 hosts including 5 locations with physical hardware and the cloud
+            \end{innerlist}
+        \item Designed and deployed solution to extend the system to cover release branches, raising throughput 11\%.
+        \item Reduced pre-submit wall-clock time by 20\% at the median, from 48 to 38 minutes.
+    \end{innerlist}
+
+    \blankline % This separates entries in the list
+
+    \textbf{Senior Software Engineer}
+    \hfill \textbf{2016 -- 2019} \\
+    \textit{Chrome Developer Experience, Individual Contributor and Tech Lead}
+    \begin{innerlist}
+        \item Technical Lead of the team owning Chrome's developer command-line SDK, code review
+            application, code search service, and issue tracking tool.
+        \item Led the migration of 700+ repositories to use Gerrit for code reviews, including
+            work to bring Gerrit to feature and performance parity with the prior system.
+    \end{innerlist}
+    
+    \blankline % This separates entries in the list
+
+    \textbf{Software Engineer III}
+    \hfill \textbf{2014 -- 2016} \\
+    \textit{Chrome Infrastructure, Individual Contributor}
+    \begin{innerlist}
+        \item Developed and launched Monorail, a complete bug and issue tracking application to
+            replace Chromium's prior home on Google Codesite.
+        \item Built and operated pipeline to migrate 16 projects, 600k issues, 5 million comments,
+            and 300k users from Codesite to Monorail in under 4 hours with zero data loss.
+        \item Established timeseries monitoring libraries, pipelines, and best practices, and
+            drove adoption of monitoring for 5000 physical hosts and 13 AppEngine apps.
+    \end{innerlist}
+    
+    \blankline % This separates entries in the list
+
+    \textbf{Software Engineer II}
+    \hfill \textbf{2012 -- 2014} \\
+    \textit{Chrome Infrastructure, Individual Contributor}
+    \begin{innerlist}
+        \item Designed and developed Recipes, a remote execution system to make Chrome's continuous
+            integration processes self-contained, dynamic, and testable.
+        \item Worked with developers and release managers to design and ship tools which enabled
+            them to interact with Git-based replicas of Chromium's Subversion repository.
+        \item Migrated the Chromium repository and all 200+ of its dependencies from Subversion
+            to Git. Final switch-over accomplished with zero hours of developer down-time.
+    \end{innerlist}
+
+\section{Other Experience}
+    \textbf{Computer Science Instructor, Xavier University of Louisiana}
+    \hfill \textbf{Fall 2018} \\
+    \textit{Googler In Residence Program}
+    \begin{innerlist}
+        \item Developed curriculum, lectures, homework, quizzes, and exams for \emph{Introduction to Computer Science}.
+        \item Taught 47 students CS and programming in Python, up through nested data structures and recursion.
+        \item Conducted interview practice sessions, leading to 11 students getting internships at top tech companies.
+    \end{innerlist}
+
+\section{Skills}
+    Fluency: Python, Git, Reliability best practices, Distributed build and test \\
+    Experience: Go, C++, JavaScript, Bash, SQL, Prolog, \LaTeX
+
+\section{Education}
+    \textbf{Harvey Mudd College}, Claremont, CA
+    \hfill \textbf{2008 -- 2012} \\
+    \textit{Bachelor of Science, Computer Science and Mathematics}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------%
+% The following is copyright and licensing information for
+% redistribution of this LaTeX source code; it also includes a liability
+% statement. If this source code is not being redistributed to others,
+% it may be omitted. It has no effect on the function of the above code.
+%----------------------------------------------------------------------%
+% Copyright (c) 2007, 2008, 2009, 2010, 2011 by Theodore P. Pavlic
+% Some modifications made by Aaron Gable, 2011, 2019.
+%
+% Unless otherwise expressly stated, this work is licensed under the
+% Creative Commons Attribution-Noncommercial 3.0 United States License. To
+% view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc/3.0/us/ or send a letter to
+% Creative Commons, 171 Second Street, Suite 300, San Francisco,
+% California, 94105, USA.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+% OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%----------------------------------------------------------------------%

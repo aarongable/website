@@ -1,97 +1,263 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<!--
+  Welcome to my personal page. This entire page, with the exception of
+  media like images and fonts, is contained in this one file. This file
+  was hand-written by me, from scratch, with no frameworks. After
+  spending many years doing non-web-dev work, I wanted to get a sense
+  of what the modern web is capable of. For better or worse, in the end
+  this project strained my design muscles more than my programming
+  muscles. Visual and experiece design is hard; respect the designers
+  in your team, folks.
+-->
+<html>
 <head>
-<link rel="stylesheet" media="screen" type="text/css" href="/styles/main.css" />
-<link rel="stylesheet" media="screen" type="text/css" href="/styles/typography.css" />
-
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>Aaron Gable :: Home</title>
-<meta name="description" content="About me." />
-<meta name="generator" content="concrete5 - 5.4.2.1" />
+  <title>Aaron Gable</title>
+  <meta name="author" content="Aaron Gable">
+  <meta name="description" content="Aaron Gable's personal site">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 
 <body>
-<div id="page">
-  <div id="headerSpacer"></div>
-	<div id="header">
-		<div id="headerNav">
-			<ul class="nav-header">
-        <li class="nav-selected first"> <a class="nav-selected" href="/index">About</a> </li>
-        <li class=" "> <a href="/projects">Projects</a> </li>
-        <li class=" "> <a href="/resume">Resume</a> </li>
-      </ul>
+  <header id="landing">
+    <div class="column center">
+      <div>
+      <h1>Aaron Gable</h1>
+      <br/>
+      <h2>open source software engineer</h2>
+      </div>
     </div>
-		
-		<h1 id="title">
-			<a href="/index"><p>Aaron Gable</p></a>
-		</h1>
-		<div class="spacer"></div>
+  </header>
+  
+  <nav>
+    <ol>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
 
-		<div id="header-area">
-			<div class="divider"></div>
-			<div id="header-area-inside">
-        <img src="/resources/circles1.jpg">
-			</div>	
-      <div class="divider"></div>
-    </div>
-	</div>			
+  <div class="float">
+    <a href="#" id="scroller">︿</a>
+  </div>
+  
+  <main>
+    <section id="about">
+      <h3>Who Am I?</h3>
+      <hr/>
+      <div class="column center">
+        <div class="twocols">
+          <div class="column center">
+            <img class="circular" id="headshot" src="resources/portrait.jpg"/>
+          </div>
+          <div class="column center">
+            <div class="text">
+              <p>Hi, I'm Aaron.</p>
+              <p>
+                I'm a senior software engineer with a passion for open-source projects.
+              </p>
+              <p>
+                I specialize in developer-facing tooling, and have worked under many names:
+                "Infrastructure", "Operations", "Developer Experience", and more.
+                I enjoy doing work which directly benefits my colleagues, due to the fast
+                feedback loops and due to the virtuous cycle in which it makes my own life
+                better at the same time.
+               </p>
+               <p>
+                 I believe in doing the right thing, equal rights and opportunities
+                 for everyone, and petting cats.
+               </p>
+             </div>
+          </div>
+        </div>
+        <br/>
+      </div>
+    </section>
 
-	<div id="central">
-		<div id="sidebar">
-			<h1>Contact</h1>
-      <div class="vspace"></div>
-      <p>
-        Aaron Gable<br /> 
-        Harvey Mudd College<br />
-        340 East Foothill Blvd.<br />
-        Claremont, CA 91711
-      </p>
-      <div class="vspace"></div>
-      <p>
-        <a href="mailto:aaron@aarongable.com">aaron@aarongable.com</a><br />
-      </p>
-      <div class="vspace"></div>
-      <p>
-        <a href="https://plus.google.com/107920819274794452795">Google+</a>
-      </p>
-      <div class="vspace"></div>
-      <p>
-        <a href="http://www.linkedin.com/pub/aaron-gable/2b/489/3a9">LinkedIn</a>
-      </p>
-		</div>
+    <hr/>
 
-		<div id="body">	
-			<h1>About Me</h1>
-      <img class="left" width=40% src="/resources/me.jpg">
-      <p>
-        Welcome!
-      </p>
-      <p>
-        I'm currently a student at 
-        <a href="http://hmc.edu">Harvey Mudd College</a>,
-        where I expect to receive my B.S. in both
-        <a href="http://cs.hmc.edu">Computer Science</a> and 
-        <a href="http://math.hmc.edu">Mathematics</a> in May 2012. After
-        graduation, I will be employed at Google as a software engineer. My
-        interests include machine learning, simulation of complex systems, and
-        emergent properties. I also have a deep and abiding (although rather
-        less marketable) interest in pure math, science fiction and fantasy
-        novels, music, and legos.
-      </p>
-      <p>
-        Please check out my <a href="/projects">past and present projects</a>,
-        my <a href="/resume">resume</a>, or feel free to drop be a line by
-        <a href="mailto:aaron@aarongable.com">email</a>.
-    </div>
+    <section id="projects">
+      <h3>Previous Work</h3>
+      <hr/>
+      <div class="column center">
+        <div class="threecols">
+          <div class="column top">
+            <div class="text">
+              <h4>Chromium Infrastructure</h4>
+              <a href="https://ci.chromium.org/p/chromium/g/main/console" target="_blank">
+                <img src="resources/milo.png" width="100%" height="auto"/>
+              </a>
+              <p>
+                The Chromium project runs what is, as far as I know, the largest
+                open-source continuous integration build and test automation
+                system in the world. We call it
+                <a href="https://chromium.googlesource.com/infra/luci/luci-py/ target="_blank"">Luci</a>.
+              </p>
+              <p>
+                The pre-submit system (the "Commit Queue")
+                processes 1,500 commits per day, building and testing each one
+                on a minimum of 25 different platform configurations and running
+                almost 900 parallel hours of tests on a fleet of over 15,000 hosts.
+                The post-submit system encompasses over 500 different platform
+                configurations. And that's all just for the main
+                <a href="https://chromium.googlesource.com/chromium/src" target="_blank">chromium repository</a>
+                itself, not including any of its 200+ dependencies, many of which
+                we also run CI systems for.
+              </p>
+              <p>
+                Since early 2019, I have been Technical Lead and manager
+                of the team responsible for the configuration, capacity planning,
+                and performance improvements of this entire system. Over the course
+                of that year we improved the median wall-clock run time of the CQ
+                by 20% (from 48 to 38 minutes). We also expanded both the pre-submit
+                and post-submit systems to cover Chromium's release branches, increasing
+                overall throughput by 11% without increasing cost.
+              </p>
+            </div>
+          </div>
+          <div class="column top">
+            <div class="text">
+              <h4>Computer Science Education</h4>
+              <a href="https://chromium-review.googlesource.com/q/status:merged+owner:agable" target="_blank">
+                <img src="resources/atlhack.jpg" width="100%" height="auto"/>
+              </a>
+              <p>
+                I spent fall semester of 2018 teaching Introduction to Computer Science
+                at Xavier University of Louisiana through the Googler in Residence program.
+              </p>
+              <p>
+                The <a href="https://buildyourfuture.withgoogle.com/programs/googleinresidence/" target="_blank">GIR program</a>
+                sends experienced software engineers to teach at Historically Black Colleges
+                and Universities such as XULA in order to support greater diversity in the
+                tech industry. Over the course of the semester I was able to introduce a generation
+                of new students to the fundamentals of computer science via Python.
+              </p>
+              <p>
+                I have experience in curriculum development, including writing an entire
+                introductory course from scratch: syllabus, lesson plans, lectures, quizzes,
+                homework, projects, and exams. I also hosted interview prep sessions, tutored
+                individual students, and hosted one wild hackathon (see above).
+              </p>
+              <p>
+                As a result, a record number of students from Xavier landed summer internships
+                with major tech companies, and the students and program at Xavier continue to
+                grow.
+            </div>
+          </div>
+          <div class="column top">
+            <div class="text">
+              <h4>Chromium Developer Tools</h4>
+              <a href="https://bugs.chromium.org/p/chromium/issues/list?q=owner:agable@chromium.org&can=1" target="_blank">
+                <img src="resources/monorail.png" width="100%" height="auto"/>
+              </a>
+              <p>
+                Monorail is the bug and issue tracking system used by the Chromium
+                project, as well as a variety of related projects. Since 2016 it has hosted
+                over 1,000,000 issues and 3,000 daily active users for Chromium alone,
+                facilitating collaboration between engineers, engagement with the
+                community, and improvements to the product.
+              </p>
+              <p>
+                I was one of the creators of Monorail, to replace the Google Code
+                issue tracker when it was being shut down in 2015. I wrote
+                features, designed and executed the data migration, and
+                <a href="https://chromium.googlesource.com/infra/infra/+/f2e2a4d6f45e7791041d4fc48041b6d2206f8b3f" target="_blank">open-sourced</a>
+                the whole codebase.
+              </p>
+              <p>  
+                I continued to own, develop, and maintain Monorail until late 2018.
+                During that time I also owned our entire developer workflow stack,
+                including our <a href="https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html" target="_blank">command-line SDK</a>,
+                our <a href="https://source.chromium.org/chromium" target="_blank">code search and indexing</a> system,
+                and our <a href="https://chromium-review.googlesource.com" target="_blank">code review tool</a>.
+                During this time I also managed and grew a team of 3 other engineers
+                to work on our developer tools.
+              </p>
+            </div>
+          </div>
 
-    <div class="ccm-spacer"></div>
-	</div>
+        </div>
+        <br/>
+      </div>
+    </section>
 
-	<div id="footer">
-			&copy; 2011 <a href="http://gplus.to/agable">Aaron Gable</a>. All rights reserved.
-	</div>
-</div>
+    <hr/>
 
+    <section id="contact">
+      <h3>Get In Touch</h3>
+      <hr/>
+      <div class="column center">
+        <div class="text">
+          <p>
+            I am currently open to engineering roles in Portland, OR,
+            speaking opportunities, and mentoring in both directions.
+            I am also open to remote collaboration.
+          </p>
+          <p>
+            If you're interested in contacting me for one of those reasons,
+            or if you just want to chat, you can find me in
+            various places around the internet.
+          </p>
+          <p>
+            My full <a href="resources/resume.pdf" target="_blank">resumé</a> is also available,
+            along with <a href="resources/resume.tex" target="_blank">its source</a>.
+          </p>
+        </div>
+        <div class="rgrid">
+          <div class="rgriditem">
+            <a href="mailto:aaron@aarongable.com" target="_blank" class="hoversquare">
+              <img src="resources/email_ico.png"/>
+              <p>aaron@aarongable.com</p>
+            </a>
+          </div>
+          <div class="rgriditem">
+            <a href="https://github.com/aarongable" target="_blank" class="hoversquare">
+              <img src="resources/github_ico.png"/>
+              <p>github/aarongable</p>
+            </a>
+          </div>
+          <div class="rgriditem">
+            <a href="https://twitter.com/phasmantistes" target="_blank" class="hoversquare">
+              <img src="resources/twitter_ico.png"/>
+              <p>@phasmantistes</p>
+            </a>
+          </div>
+          <div class="rgriditem">
+            <a href="https://linkedin.com/in/agable" target="_blank" class="hoversquare">
+              <img src="resources/linkedin_ico.png"/>
+              <p>in/agable</p>
+            </a>
+          </div>
+        </div>
+        <br/>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer">
+    <p>Copyright 2020 Aaron Gable</p>
+  </div>
+
+  <script>
+    let scroller = document.querySelector('#scroller');
+    new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          scroller.textContent = '﹀';
+          scroller.href = '#about';
+        } else {
+          scroller.textContent = '︿';
+          scroller.href = '#';
+        }
+      });
+    }, {threshold: 0.5}).observe(document.querySelector('#landing'));
+  </script>
 </body>
 </html>
